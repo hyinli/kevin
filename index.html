@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kelly">
+<meta property="og:title" content="Kelly Space">
 <meta property="og:url" content="https://hyinli.github.io/index.html">
-<meta property="og:site_name" content="Kelly">
+<meta property="og:site_name" content="Kelly Space">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kelly">
+<meta name="twitter:title" content="Kelly Space">
 
 
 
@@ -95,7 +95,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -121,7 +121,7 @@
 
 
 
-  <title>Kelly</title>
+  <title>Kelly Space</title>
   
 
 
@@ -152,12 +152,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Kelly</span>
+        <span class="site-title">Kelly Space</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">各种各样的小东小西</p>
       
   </div>
 
@@ -236,16 +236,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
-            
-            Commonweal 404
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -284,11 +274,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kelly">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kelly">
+      <meta itemprop="name" content="Kelly Space">
     </span>
 
     
@@ -406,11 +396,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kelly">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kelly">
+      <meta itemprop="name" content="Kelly Space">
     </span>
 
     
@@ -474,14 +464,14 @@
           
             <p>正态分布又叫高斯分布，很多统计学的理论都是假设所用的数据符合正态分布。所以在研究数据时，首先要看数据是否符合正态分布。</p>
 <p>首先，R中很多安装包中有自带的数据集，所以在使用某个数据前先看它是在哪个包中。具体可以参考<a href="https://blog.csdn.net/xmuecor/article/details/37512125" target="_blank" rel="noopener">R各个包里面的数据集列表</a>.<br>这次主要用MASS包中的crabs数据</p>
-<p>#1 直方图检验crabs对象是否正态分布<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library(lattice)</span><br><span class="line">library(MASS)</span><br><span class="line">histogram(crabs$CW)</span><br><span class="line">histogram(~CW|sex, data = crabs,col=&apos;lightblue&apos;)</span><br></pre></td></tr></table></figure></p>
+<h1><span id="1-直方图检验crabs对象是否正态分布">1 直方图检验crabs对象是否正态分布</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library(lattice)</span><br><span class="line">library(MASS)</span><br><span class="line">histogram(crabs$CW)</span><br><span class="line">histogram(~CW|sex, data = crabs,col=&apos;lightblue&apos;)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>解释：<br><code>|</code>是统计学符号，表示“基于…..的条件”，这里按螃蟹的性别进行区分处理。</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/7976641-df90b666660ce070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>#2这条 QQ图进行检测<br><code>qqnorm()</code>可以绘制QQ图。通过绘制的图是否呈现一直线判断是否符合正态分布。另外还有一个<code>qqline()</code>函数，在QQ图中绘制一条直线，QQ图中的点越接近这条直线，表示数据越接近正态分布。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qqnorm(crabs$CW, main =&quot;QQ for Crabs&quot;)</span><br><span class="line">qqline(crabs$CW)</span><br></pre></td></tr></table></figure></p>
+<h1><span id="2这条-qq图进行检测">2这条 QQ图进行检测</span></h1><p><code>qqnorm()</code>可以绘制QQ图。通过绘制的图是否呈现一直线判断是否符合正态分布。另外还有一个<code>qqline()</code>函数，在QQ图中绘制一条直线，QQ图中的点越接近这条直线，表示数据越接近正态分布。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qqnorm(crabs$CW, main =&quot;QQ for Crabs&quot;)</span><br><span class="line">qqline(crabs$CW)</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/7976641-6bd671b7f31bccfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>#3 shapiro.test()函数<br>上述判断方法相对比较主观，<code>shapiro.test()</code>相对比较客观。只需将检验的数据当作shapiro。test()的函数即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nortest1&lt;-shapiro.test(crabs$CW)</span><br><span class="line">nortest1</span><br></pre></td></tr></table></figure></p>
+<h1><span id="3-shapirotest函数">3 shapiro.test()函数</span></h1><p>上述判断方法相对比较主观，<code>shapiro.test()</code>相对比较客观。只需将检验的数据当作shapiro。test()的函数即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nortest1&lt;-shapiro.test(crabs$CW)</span><br><span class="line">nortest1</span><br></pre></td></tr></table></figure></p>
 <p>显示为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; nortest1</span><br><span class="line"></span><br><span class="line">	Shapiro-Wilk normality test</span><br><span class="line"></span><br><span class="line">data:  crabs$CW</span><br><span class="line">W = 0.99106, p-value = 0.2542</span><br></pre></td></tr></table></figure></p>
 <p>p-value反应服从正态分布的概率，值越小越小的概率符合，通常0.05做标准，大于0.05则表示符合正态分布（此处为0.2542），故符合正态分布</p>
 <p>接下来分别检验公螃蟹和母螃蟹是否符合正态分布<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">nortest2 &lt;- with(crabs, tapply(CW, sex,shapiro.test))</span><br><span class="line">nortest2</span><br><span class="line">#结果如下</span><br><span class="line">&gt; nortest2</span><br><span class="line">$F</span><br><span class="line"></span><br><span class="line">	Shapiro-Wilk normality test</span><br><span class="line"></span><br><span class="line">data:  X[[i]]</span><br><span class="line">W = 0.98823, p-value = 0.5256</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$M</span><br><span class="line"></span><br><span class="line">	Shapiro-Wilk normality test</span><br><span class="line"></span><br><span class="line">data:  X[[i]]</span><br><span class="line">W = 0.98327, p-value = 0.2368</span><br></pre></td></tr></table></figure></p>
@@ -539,11 +529,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kelly">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kelly">
+      <meta itemprop="name" content="Kelly Space">
     </span>
 
     
@@ -606,13 +596,13 @@
         
           
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
@@ -674,6 +664,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -683,6 +675,8 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Kelly">
             
               <p class="site-author-name" itemprop="name">Kelly</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -724,6 +718,13 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -771,11 +772,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
