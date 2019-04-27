@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="ggstatsplot)是很优秀的统计作图包,需要3.5及以上R安装如下12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages wh">
+<meta name="description" content="ggstatsplot是很优秀的统计作图包,需要3.5及以上R 安装如下 12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages w">
 <meta name="keywords" content="R,绘图,SCI绘图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ggstatsplot包的安装和简单使用">
 <meta property="og:url" content="https://hyinli.github.io/2019/04/27/ggstatsplot包的安装和简单使用/index.html">
 <meta property="og:site_name" content="Kelly Space">
-<meta property="og:description" content="ggstatsplot)是很优秀的统计作图包,需要3.5及以上R安装如下12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages wh">
+<meta property="og:description" content="ggstatsplot是很优秀的统计作图包,需要3.5及以上R 安装如下 12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages w">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7976641-f196ac4e89be8ca5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:updated_time" content="2019-04-27T07:47:51.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ggstatsplot包的安装和简单使用">
-<meta name="twitter:description" content="ggstatsplot)是很优秀的统计作图包,需要3.5及以上R安装如下12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages wh">
+<meta name="twitter:description" content="ggstatsplot是很优秀的统计作图包,需要3.5及以上R 安装如下 12345devtools::install_github(  repo = &amp;quot;IndrajeetPatil/ggstatsplot&amp;quot;, # package path on GitHub  dependencies = TRUE,                 # installs packages w">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7976641-f196ac4e89be8ca5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -397,8 +397,11 @@
       
 
       
-        <p><a href="[https://paulvanderlaken.com/2018/08/26/ggstatsplot-creating-graphics-including-statistical-details/](https://paulvanderlaken.com/2018/08/26/ggstatsplot-creating-graphics-including-statistical-details/">ggstatsplot</a><br>)是很优秀的统计作图包,需要3.5及以上R<br>安装如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_github(</span><br><span class="line">  repo = &quot;IndrajeetPatil/ggstatsplot&quot;, # package path on GitHub</span><br><span class="line">  dependencies = TRUE,                 # installs packages which ggstatsplot depends on</span><br><span class="line">  upgrade_dependencies = TRUE          # updates any out of date dependencies</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p>用某个基因在乳腺癌中突变类型和mRNA表达关系做了一个图，比较漂亮<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getwd()</span><br><span class="line">a = read.table(&apos;plot.txt&apos;,header = TRUE, sep = &apos;\t&apos;, fill=T)</span><br><span class="line">tail(a)</span><br><span class="line">colnames(a)=c(&apos;ID&apos;,&apos;Alternations&apos;,&apos;mRNA_expression&apos;,&apos;Mutations&apos;)</span><br><span class="line">dat = a</span><br><span class="line">library(ggstatsplot)</span><br><span class="line">ggbetweenstats(data=dat, x=Alternations, y=mRNA_expression)</span><br></pre></td></tr></table></figure></p>
+        <p><a href="%5Bhttps://paulvanderlaken.com/2018/08/26/ggstatsplot-creating-graphics-including-statistical-details/%5D(https://paulvanderlaken.com/2018/08/26/ggstatsplot-creating-graphics-including-statistical-details/)">ggstatsplot</a>是很优秀的统计作图包,需要3.5及以上R<br>
+安装如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_github(</span><br><span class="line">  repo = &quot;IndrajeetPatil/ggstatsplot&quot;, # package path on GitHub</span><br><span class="line">  dependencies = TRUE,                 # installs packages which ggstatsplot depends on</span><br><span class="line">  upgrade_dependencies = TRUE          # updates any out of date dependencies</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>用某个基因在乳腺癌中突变类型和mRNA表达关系做了一个图，比较漂亮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getwd()</span><br><span class="line">a = read.table(&apos;plot.txt&apos;,header = TRUE, sep = &apos;\t&apos;, fill=T)</span><br><span class="line">tail(a)</span><br><span class="line">colnames(a)=c(&apos;ID&apos;,&apos;Alternations&apos;,&apos;mRNA_expression&apos;,&apos;Mutations&apos;)</span><br><span class="line">dat = a</span><br><span class="line">library(ggstatsplot)</span><br><span class="line">ggbetweenstats(data=dat, x=Alternations, y=mRNA_expression)</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/7976641-f196ac4e89be8ca5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
 
       
@@ -420,7 +423,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <div>请博主喝杯咖啡</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -567,7 +570,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
