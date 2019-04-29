@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[github ribbon加到网页右上角]]></title>
+    <url>%2F2019%2F04%2F29%2F%E7%BD%91%E9%A1%B5%E5%8F%B3%E4%B8%8A%E8%A7%92%E6%98%BE%E7%A4%BAgithub%2F</url>
+    <content type="text"><![CDATA[1 去[这里](https://github.blog/2008-12-19-github-ribbons/找喜欢的样式 找一个合适并喜欢的样式，复制方框的代码 2 打开主题目录下的_layout.swig文件文件 \themes\next\layout 打开后，在&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;下面（大概23行） 粘贴刚才复制的代码，改成你自己的github名字就可以了。 另外，这里可以延伸。放自己可以链接的外地址，并加上图片，道理一样。]]></content>
+      <categories>
+        <category>R</category>
+      </categories>
+      <tags>
+        <tag>R</tag>
+        <tag>统计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[同一个github账户绑定两个域名]]></title>
     <url>%2F2019%2F04%2F29%2F%E5%90%8C%E4%B8%80%E4%B8%AAgithub%E8%B4%A6%E6%88%B7%E7%BB%91%E5%AE%9A%E4%B8%A4%E4%B8%AA%E5%9F%9F%E5%90%8D%2F</url>
     <content type="text"><![CDATA[一个github账号可以建立很多仓库，但是只能有一个个人主页仓库，其余都是项目仓库。主页仓库就是你的名字.github.io这个，其余的就是https://github.com/hyinli/项目名称这种。 前面已经建立个人主页仓库并绑定域名，现在再利用项目仓库网页并绑定个人域名。具体如下 1 先建立个人项目仓库比如名字kk 2 建gh-pages分支（不能用master） 3 域名解析 其中，IP这样获得 ping 你的名字.github.io 4 根目录的source文件夹见CNAME文件 首行写入你要绑定的域名，可以带www 说明：网上建议裸域名。但是是可以带www的，只是项目仓库必须建在gh-pages分支，master分支会一直提示错误。 5 根目录的’config.yml文件，修改 6 github 项目仓库，setting 填入你的域名，带www —The end—]]></content>
