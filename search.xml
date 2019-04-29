@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[同一个github账户绑定两个域名]]></title>
+    <url>%2F2019%2F04%2F29%2F%E5%90%8C%E4%B8%80%E4%B8%AAgithub%E8%B4%A6%E6%88%B7%E7%BB%91%E5%AE%9A%E4%B8%A4%E4%B8%AA%E5%9F%9F%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[一个github账号可以建立很多仓库，但是只能有一个个人主页仓库，其余都是项目仓库。主页仓库就是你的名字.github.io这个，其余的就是https://github.com/hyinli/项目名称这种。 前面已经建立个人主页仓库并绑定域名，现在再利用项目仓库网页并绑定个人域名。具体如下 1 先建立个人项目仓库比如名字kk 2 建gh-pages分支（不能用master） 3 域名解析 其中，IP这样获得 ping 你的名字.github.io 4 根目录的source文件夹见CNAME文件 首行写入你要绑定的域名，可以带www 说明：网上建议裸域名。但是是可以带www的，只是项目仓库必须建在gh-pages分支，master分支会一直提示错误。 5 根目录的’config.yml文件，修改 6 github 项目仓库，setting 填入你的域名，带www —The end—]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>hexo</tag>
+        <tag>个人域名</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[github两个账户不能进行push的解决办法]]></title>
     <url>%2F2019%2F04%2F28%2Fgithub%E4%B8%A4%E4%B8%AA%E8%B4%A6%E6%88%B7%E4%B8%8D%E8%83%BD%E8%BF%9B%E8%A1%8Cpush%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
     <content type="text"><![CDATA[因为邮箱和本地电脑问题，我重新申请了github账号，但使用新账户申请博客的时候push出现问题，无法进行推送。windows系统解决办法如下 搜索“凭据管理器”，进入windows凭据，普通凭据， 然后把三个与github相关的删除即可。]]></content>
