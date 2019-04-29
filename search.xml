@@ -77,7 +77,7 @@
     <url>%2F2019%2F04%2F29%2Fggstatsplot%E5%8C%85%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[ggstatsplot是很优秀的统计作图包,需要3.5及以上R 安装如下 12345devtools::install_github( repo = &quot;IndrajeetPatil/ggstatsplot&quot;, # package path on GitHub dependencies = TRUE, # installs packages which ggstatsplot depends on upgrade_dependencies = TRUE # updates any out of date dependencies) 用某个基因在乳腺癌中突变类型和mRNA表达关系做了一个图，比较漂亮 1234567getwd()a = read.table(&apos;plot.txt&apos;,header = TRUE, sep = &apos;\t&apos;, fill=T)tail(a)colnames(a)=c(&apos;ID&apos;,&apos;Alternations&apos;,&apos;mRNA_expression&apos;,&apos;Mutations&apos;)dat = alibrary(ggstatsplot)ggbetweenstats(data=dat, x=Alternations, y=mRNA_expression)]]></content>
       <categories>
-        <category>R</category>
+        <category>r</category>
       </categories>
       <tags>
         <tag>R</tag>
