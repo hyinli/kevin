@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[github ribbon加到网页右上角]]></title>
     <url>%2F2019%2F04%2F29%2F%E7%BD%91%E9%A1%B5%E5%8F%B3%E4%B8%8A%E8%A7%92%E6%98%BE%E7%A4%BAgithub%2F</url>
-    <content type="text"><![CDATA[1 去这里或这里找喜欢的样式 找一个合适并喜欢的样式，复制方框的代码 2 打开主题目录下的_layout.swig文件文件 \themes\next\layout 打开后，在&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;下面（大概23行） 粘贴刚才复制的代码，改成你自己的github名字就可以了。 另外，这里可以延伸。放自己可以链接的外地址，并加上图片，道理一样。]]></content>
+    <content type="text"><![CDATA[1 去这里或这里找喜欢的样式 找一个合适并喜欢的样式，复制方框的代码 前面的ribbons容易位置错误 2 打开主题目录下的_layout.swig文件文件 \themes\next\layout 打开后，在&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;下面（大概23行） 粘贴刚才复制的代码，改成你自己的github名字就可以了。 另外，这里可以延伸。放自己可以链接的外地址，并加上图片，道理一样。]]></content>
       <categories>
         <category>hexo</category>
       </categories>
