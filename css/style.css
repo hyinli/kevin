@@ -9,6 +9,49 @@ body:after {
 body:after {
   clear: both;
 }
+.donate_bar {
+  text-align: center;
+  margin-top: 5%;
+}
+.donate_bar a.btn_donate {
+  display: inline-block;
+  width: 82px;
+  height: 82px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+  -webkit-transition: background 0s;
+  -moz-transition: background 0s;
+  -o-transition: background 0s;
+  -ms-transition: background 0s;
+  -webkit-transition: background 0s;
+  -moz-transition: background 0s;
+  -ms-transition: background 0s;
+  transition: background 0s;
+}
+.donate_bar a.btn_donate:hover {
+  background-position: 0 -82px;
+}
+.donate_bar .donate_txt {
+  display: block;
+  color: #9d9d9d;
+  font: 14px/2 "Microsoft Yahei";
+}
+.donate_bar.hidden {
+  display: none;
+}
+.post-donate {
+  margin-top: 80px;
+}
+#donate_guide {
+  height: 210px;
+  width: 420px;
+  margin: 0 auto;
+}
+#donate_guide img {
+  height: 200px;
+  height: 200px;
+}
 html,
 body,
 div,
@@ -132,7 +175,7 @@ body {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  color: #16171b;
+  color: #333;
 }
 #rocket {
   position: fixed;
@@ -142,7 +185,7 @@ body {
   visibility: hidden;
   width: 26px;
   height: 48px;
-  background: url("https://image.ibb.co/d9pvfU/rocket.png") no-repeat 50% 0;
+  background: url("images/rocket.png") no-repeat 50% 0;
   opacity: 0;
   -webkit-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -moz-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -161,7 +204,7 @@ body {
   display: block;
   margin-top: 48px;
   height: 14px;
-  background: url("https://image.ibb.co/d9pvfU/rocket.png") no-repeat 50% -48px;
+  background: url("images/rocket.png") no-repeat 50% -48px;
   opacity: 0.5;
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
@@ -391,7 +434,7 @@ body {
   font-weight: bold;
 }
 .article {
-  color: #555;
+  color: #333;
   margin: 0 0 40px 0;
 }
 @media screen and (max-width: 479px) {
@@ -414,7 +457,9 @@ body {
 }
 .article-meta {
   margin: 7px 0 20px;
-  color: #999;
+  color: #a6a6a6;
+  text-align: center;
+  font-family: Oswald, "Microsoft Yahei", Arial, Helvetica, sans-serif;
   font-size: 0.9em;
 }
 .article-meta:before,
@@ -425,13 +470,24 @@ body {
 .article-meta:after {
   clear: both;
 }
+.article-meta a {
+  color: #a6a6a6;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.article-meta span:before {
+  margin: 0 0 0 8px;
+  padding: 0 6px 0 0;
+  content: "/";
+  color: #d6d6d6;
+}
 .article-date {
   color: #999;
   text-align: center;
   font-weight: normal;
 }
 .article-date:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 .article-category {
   text-align: center;
@@ -445,7 +501,6 @@ body {
 .article-category-link {
   display: inline;
   margin: 0;
-  font-weight: normal;
 }
 .ico-folder:before {
   font-family: "FontAwesome";
@@ -453,15 +508,16 @@ body {
   color: #333;
 }
 .article-category-link:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 .article-header h1 {
   margin: 0 0 3px 0;
-  font-size: 20px;
+  font-size: 1.6em;
   line-height: 1.2;
+  font-weight: bold;
 }
 .article-header h1 a {
-  color: #404040;
+  color: #333;
   text-decoration: none;
 }
 .article-title {
@@ -475,7 +531,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #ff2828;
+  color: #1fa0ae;
   text-decoration: none;
 }
 .article-entry {
@@ -517,7 +573,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-entry a:hover {
-  color: #ff2828;
+  color: #1fa0ae;
   text-decoration: none;
 }
 .article-entry ul,
@@ -645,7 +701,7 @@ a.article-title:hover {
   text-align: center;
 }
 .article-more-link a {
-  color: #ff2828;
+  color: #1fa0ae;
   display: inline-block;
   font-size: 0.9em;
   line-height: 1em;
@@ -785,7 +841,7 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #eef1f8;
+  color: #333;
   line-height: 1em;
   font-weight: bold;
 }
@@ -894,7 +950,7 @@ a.article-title:hover {
   background: color-google;
 }
 .article-gallery {
-  background: transparent;
+  background: #000;
   position: relative;
   margin-bottom: 40px;
 }
@@ -915,13 +971,12 @@ a.article-title:hover {
 }
 .article-gallery-img img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 .toc-article {
-  position: absolute;
   border-left: rgba(88,88,88,0.1) 1px solid;
-  padding: 1em 1em 0 1em;
+  padding: 1em 0 0 1em;
   margin-left: 1em;
 }
 .toc-title {
@@ -933,7 +988,7 @@ a.article-title:hover {
   margin-right: 0.5em;
 }
 #toc {
-  width: inherit;
+  width: 100%;
   line-height: 1em;
   font-size: 0.9em;
   float: left;
@@ -951,9 +1006,9 @@ a.article-title:hover {
 }
 .toc-fixed {
   position: fixed;
+  width: inherit !important;
   top: 30px;
   margin-top: 0;
-  max-height: 81%;
   overflow: hidden;
   z-index: 1;
 }
@@ -967,15 +1022,15 @@ a.article-title:hover {
   background-color: transparent !important;
 }
 .nav .active > a {
-  color: #ff2828;
+  color: #333;
 }
 .nav-link {
-  font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
   color: color-link;
   padding: 1px !important;
 }
 .nav-link:hover {
-  color: #ff2828;
+  color: #333;
 }
 .nav-child {
   margin-left: 1em;
@@ -1008,7 +1063,7 @@ a.article-title:hover {
   font-size: 1.5em;
 }
 .archive-year {
-  color: #16171b;
+  color: #333;
 }
 .archive-year:before {
   font-family: "FontAwesome";
@@ -1020,21 +1075,21 @@ a.article-title:hover {
   margin: 1em 0 0 0;
   font-size: 1.2em;
   font-weight: bold;
-  color: #16171b;
+  color: #333;
   text-align: center;
-  border-left: 0px solid #ff2828;
+  border-left: 0px solid #1fa0ae;
   background: rgba(208,211,248,0.15);
 }
 .archives-tags-wrap blockquote a {
-  color: #16171b;
+  color: #333;
   margin: 0.2em;
 }
 .archives-tags-wrap blockquote a:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 .archive-tag {
   text-transform: none;
-  color: #16171b;
+  color: #333;
 }
 .archive-tag:before {
   font-family: "FontAwesome";
@@ -1049,29 +1104,26 @@ a.article-title:hover {
   font-size: 1.1em;
   font-weight: bold;
   line-height: 1.7em;
-  color: #ff2828;
+  color: #1fa0ae;
   text-align: left;
-  border-left: 0px solid #ff2828;
+  border-left: 0px solid #1fa0ae;
   background: rgba(208,211,248,0.15);
 }
 .archives-category-wrap blockquote a {
-  color: #16171b;
+  color: #333;
   margin: 0.2em;
 }
 .archives-category-wrap blockquote a:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 .archives-category-wrap blockquote a:before {
   font-family: "FontAwesome";
   content: "\f0da";
   margin-right: 0.5em;
 }
-.archives-category-wrap blockquote .category-list-child {
-  padding-left: 2em;
-}
 .archive-category {
   text-transform: none;
-  color: #16171b;
+  color: #333;
 }
 .archive-category:before {
   font-family: "FontAwesome";
@@ -1108,7 +1160,7 @@ a.article-title:hover {
   margin-bottom: 0px;
 }
 .archive-article-title {
-  font-size: 1.2em;
+  font-size: 1.05em;
   text-decoration: none;
   color: #333;
   -webkit-transition: color 0.2s;
@@ -1116,11 +1168,11 @@ a.article-title:hover {
   -ms-transition: color 0.2s;
   transition: color 0.2s;
   line-height: 1.6em;
-  border-left: 1px solid #16171b;
+  border-left: 1px solid #333;
   padding-left: 15px;
 }
 .archive-article-title:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1134,12 +1186,17 @@ a.article-title:hover {
   margin-right: 15px;
   display: block;
   font-size: 1.1em;
-  font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
 }
 .archive-article-date:hover {
-  color: #ff2828;
+  color: #1fa0ae;
 }
 #page-nav {
+  font-family: Oswald, "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin: 50px auto;
   background: #fff;
   border: 1px solid #eef1f8;
@@ -1165,12 +1222,12 @@ a.article-title:hover {
   text-decoration: none;
 }
 #page-nav a:hover {
-  background: #ff2828;
+  background: #1fa0ae;
   color: #fff;
 }
 #page-nav .prev {
   color: #fff;
-  background: #16171b;
+  background: #333;
   float: left;
 }
 #page-nav .prev:before {
@@ -1180,7 +1237,7 @@ a.article-title:hover {
 }
 #page-nav .next {
   color: #fff;
-  background: #16171b;
+  background: #333;
   float: right;
 }
 #page-nav .next:after {
@@ -1205,14 +1262,14 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #f8f8f8;
+  background: #000;
   margin: 20px 0px;
   padding: 15px 20px;
   border-style: solid;
   border-color: #eef1f8;
   border-width: 1px 0;
   overflow: auto;
-  color: $highlight-foreground;
+  color: #eaeaea;
   font-size: 0.9em;
   line-height: 1em;
 }
@@ -1266,7 +1323,7 @@ figure.highlight::-webkit-scrollbar-track {
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
-  color: $highlight-comment;
+  color: #969896;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -1293,21 +1350,21 @@ figure.highlight::-webkit-scrollbar-track {
 .article-entry .highlight .gutter pre {
   color: #aaa;
   text-align: right;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 .article-entry .highlight .line {
   height: 1.7em;
   line-height: 1.7em;
 }
 .article-entry .highlight .line.marked {
-  background: $highlight-selection;
+  background: #424242;
 }
 .article-entry .gist {
   margin: 0 -20px;
   border-style: solid;
   border-color: #eef1f8;
   border-width: 1px 0;
-  background: #f8f8f8;
+  background: #000;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1333,8 +1390,8 @@ figure.highlight::-webkit-scrollbar-track {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #f8f8f8;
-  color: $highlight-comment;
+  background: #000;
+  color: #969896;
   font: 0.85em -apple-system, "Arial", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0 0;
   padding: 0;
@@ -1350,7 +1407,7 @@ figure.highlight::-webkit-scrollbar-track {
 }
 pre .comment,
 pre .title {
-  color: $highlight-comment;
+  color: #969896;
 }
 pre .variable,
 pre .attribute,
@@ -1364,7 +1421,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: $highlight-red;
+  color: #d54e53;
 }
 pre .number,
 pre .preprocessor,
@@ -1372,12 +1429,12 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: $highlight-orange;
+  color: #e78c45;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: $highlight-green;
+  color: #b9ca4a;
 }
 pre .string,
 pre .value,
@@ -1385,10 +1442,10 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: $highlight-green;
+  color: #b9ca4a;
 }
 pre .css .hexcolor {
-  color: $highlight-aqua;
+  color: #70c0b1;
 }
 pre .function,
 pre .python .decorator,
@@ -1398,95 +1455,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: $highlight-blue;
+  color: #7aa6da;
 }
 pre .keyword,
 pre .javascript .function {
-  color: $highlight-purple;
-}
-pre {
-  color: #525252;
-}
-pre .function .keyword,
-pre .constant {
-  color: #0092db;
-}
-pre .keyword,
-pre .attribute {
-  color: #e96900;
-}
-pre .number,
-pre .literal {
-  color: #ae81ff;
-}
-pre .tag,
-pre .tag .title,
-pre .change,
-pre .winutils,
-pre .flow,
-pre .lisp .title,
-pre .clojure .built_in,
-pre .nginx .title,
-pre .tex .special {
-  color: #2973b7;
-}
-pre .symbol,
-pre .symbol .string,
-pre .value,
-pre .regexp {
-  color: #42b983;
-}
-pre .title {
-  color: #83b917;
-}
-pre .tag .value,
-pre .string,
-pre .subst,
-pre .haskell .type,
-pre .preprocessor,
-pre .ruby .class .parent,
-pre .built_in,
-pre .sql .aggregate,
-pre .django .template_tag,
-pre .django .variable,
-pre .smalltalk .class,
-pre .javadoc,
-pre .django .filter .argument,
-pre .smalltalk .localvars,
-pre .smalltalk .array,
-pre .attr_selector,
-pre .pseudo,
-pre .addition,
-pre .stream,
-pre .envvar,
-pre .apache .tag,
-pre .apache .cbracket,
-pre .tex .command,
-pre .prompt {
-  color: #42b983;
-}
-pre .comment,
-pre .java .annotation,
-pre .python .decorator,
-pre .template_comment,
-pre .pi,
-pre .doctype,
-pre .shebang,
-pre .apache .sqbracket,
-pre .tex .formula {
-  color: #b3b3b3;
-}
-pre .deletion {
-  color: #ba4545;
-}
-pre .coffeescript .javascript,
-pre .javascript .xml,
-pre .tex .formula,
-pre .xml .javascript,
-pre .xml .vbscript,
-pre .xml .css,
-pre .xml .cdata {
-  opacity: 0.5;
+  color: #c397d8;
 }
 @media screen and (max-width: 479px) {
   #mobile-nav {
@@ -1537,6 +1510,7 @@ pre .xml .cdata {
 }
 .ins-search-input {
   width: 100%;
+  height: 100%;
   border: none;
   outline: none;
   font-size: 16px;
@@ -1565,7 +1539,7 @@ pre .xml .cdata {
   display: inline-block;
 }
 .ins-close:hover {
-  color: #16171b;
+  color: #333;
 }
 .ins-search-container {
   left: 50%;
@@ -1577,7 +1551,7 @@ pre .xml .cdata {
   box-sizing: border-box;
   width: 540px;
   margin-left: -270px;
-  border-top: 2px solid #ff2828;
+  border-top: 2px solid #1fa0ae;
 }
 @media screen and (max-width: 559px), screen and (max-height: 479px) {
   .ins-search-container {
@@ -1641,7 +1615,7 @@ pre .xml .cdata {
 .ins-section .ins-search-item:hover,
 .ins-section .ins-search-item.active {
   color: #fff;
-  background: #16171b;
+  background: #333;
 }
 .ins-section .ins-search-item:hover .ins-slug,
 .ins-section .ins-search-item.active .ins-slug,
@@ -1675,16 +1649,15 @@ pre .xml .cdata {
 .widget {
   color: #777;
   background: transparent;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: #d6d6d6;
+  padding: 15px 0 0;
+  border-top: 1px solid #333;
 }
 .widget a {
   color: #555;
   text-decoration: none;
 }
 .widget a:hover {
-  color: #ff2828;
+  color: #1fa0ae;
   text-decoration: none;
 }
 .widget ul ul,
@@ -1703,24 +1676,27 @@ pre .xml .cdata {
   border-width: 0;
 }
 .widget_athemes_tabs .widget ul {
-  background: #f6f6f6;
-  border: 1px solid #e6e6e6;
+  background: transparent;
+  border-bottom: 1px solid #333;
 }
 .widget_athemes_tabs .widget ul li {
-  margin: 0;
-  padding: 10px;
+  margin: 0 0 15px;
 }
 .widget_athemes_tabs .widget ul li a {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: uppercase;
   line-height: 1.2;
   color: #222;
-  font-weight: 700;
-  font-family: "Yanone Kaffeesatz", "Microsoft YaHei Light", Arial, Helvetica, sans-serif;
+  font-family: Oswald, "Microsoft Yahei", Arial, Helvetica, sans-serif;
 }
 .widget_athemes_tabs .widget ul li a:hover {
-  color: #ff2828;
+  color: #1fa0ae;
+}
+.widget-social-icons li {
+  float: left;
+  margin: 5px 10px 5px 0;
+  text-align: center;
 }
 .widget {
   line-height: 1.6em;
